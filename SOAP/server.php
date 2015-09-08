@@ -1,5 +1,15 @@
 <?php 
 
+/***
+ * SOAP example - Alejandro Martinez (almarag@gmail.com) 
+ * In order to this example works, please host code on your webserver
+ * and modify the endpoint Uri on script accordingly. 
+ * This is the server part of example. I used Zend\Soap libraries
+ * since SoapServer function on PHP doesn't support WSDL generation by itself.
+ * AutoDiscover class is a very useful library for WSDL generation.
+ * For client side part please refer to client.php script.  
+ ***/
+ 
 require_once("WebService/TestWebService.php");
 $loader = require 'vendor/autoload.php';
 
