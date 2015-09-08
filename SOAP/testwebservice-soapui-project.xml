@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="4bd62913-5692-4fc5-a799-6a55f7b42b06" activeEnvironment="Default" name="testwebservice" resourceRoot="" soapui-version="5.2.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="dd09d3c6-0709-4237-b828-4415f3268202" wsaVersion="NONE" name="TestWebServiceBinding" type="wsdl" bindingName="{http://localhost:8080/webservicetest/server.php}TestWebServiceBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/webservicetest/server.php?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/webservicetest/server.php?wsdl"><con:part><con:url>http://localhost:8080/webservicetest/server.php?wsdl</con:url><con:content><![CDATA[<definitions name="TestWebService" targetNamespace="http://localhost:8080/webservicetest/server.php" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost:8080/webservicetest/server.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <types>
+    <xsd:schema targetNamespace="http://localhost:8080/webservicetest/server.php"/>
+  </types>
+  <portType name="TestWebServicePort">
+    <operation name="helloWorld">
+      <documentation>helloWorld</documentation>
+      <input message="tns:helloWorldIn"/>
+    </operation>
+  </portType>
+  <binding name="TestWebServiceBinding" type="tns:TestWebServicePort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="helloWorld">
+      <soap:operation soapAction="http://localhost:8080/webservicetest/server.php#helloWorld"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost:8080/webservicetest/server.php"/>
+      </input>
+    </operation>
+  </binding>
+  <service name="TestWebServiceService">
+    <port name="TestWebServicePort" binding="tns:TestWebServiceBinding">
+      <soap:address location="http://localhost:8080/webservicetest/server.php"/>
+    </port>
+  </service>
+  <message name="helloWorldIn"/>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:8080/webservicetest/server.php</con:endpoint></con:endpoints><con:operation id="a0aeb3d1-dad0-497b-8424-3070755032a2" isOneWay="false" action="http://localhost:8080/webservicetest/server.php#helloWorld" name="helloWorld" bindingOperationName="helloWorld" type="One-Way" inputName="" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8c491ef9-7c1e-4ebf-89ff-ed8d341b2867" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/webservicetest/server.php</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://localhost:8080/webservicetest/server.php">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ser:helloWorld soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://localhost:8080/webservicetest/server.php#helloWorld"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
