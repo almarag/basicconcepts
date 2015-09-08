@@ -2,6 +2,14 @@
 
 /***
  * Repository pattern example - Alejandro Martinez (almarag@gmail.com)
+ * Repository Pattern is one of the most useful patterns for any database driven app.
+ * This pattern allows to encapsulate the Data Access layer using a Service wrapper.
+ * This wrapper acts as common decoupling interface between application and data layer using data repositories, that way
+ * we can switch repositories without affecting upper layers into application.
+ * On this example, I used a Mock Repository using in memory arrays (ideal to unit testing)
+ * Also, I used a Sqlite repository to do the real persistence. Based on this paradigm, if we want
+ * to use MySQL or SQL Server, I just need to create a UserRepositoryMySQL or UserRepositorySQLServer, each one
+ * with the right connection configuration and sentences to do persistence.  
  ***/	
  
 require_once("IUserRepository.php");
