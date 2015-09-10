@@ -20,5 +20,5 @@ class TestRestService extends PHPUnit_Framework_TestCase
 				
 		// Basic assert
 		$this->assertEquals("You entered: 1", $service->TestService(1));
-	}
+	}	
 }
