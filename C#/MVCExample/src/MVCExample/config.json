@@ -1,0 +1,11 @@
+{
+  "Data": {
+    "DefaultConnection": {
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=aspnet5-MVCExample-20ad7335-df1d-4424-9b37-a7e341db1607;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  },
+  "AppSettings": {
+    "GoogleAPIUrl": "https://ajax.googleapis.com/ajax/services/feed/load?v=1.0&q=",
+    "ReutersTechFeedUrl": "http://feeds.reuters.com/reuters/technologyNews?format=xml"
+  }
+}
